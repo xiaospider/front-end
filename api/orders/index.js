@@ -139,7 +139,9 @@
       if (err) {
         return next(err);
       }
-      helpers.respondStatusBody(res, status, JSON.stringify(result));
+      setTimeout(() => {
+        helpers.respondStatusBody(res, status, JSON.stringify(result));
+      }, 20000);
     });
   });
 
