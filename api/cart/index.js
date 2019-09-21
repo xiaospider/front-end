@@ -65,7 +65,12 @@
   app.post("/cart", function (req, res, next) {
     console.log("Attempting to add to cart: " + JSON.stringify(req.body));
 
-    if (req.body.id == null) {
+    /*if (req.body.id == null) {
+      next(new Error("Must pass id of item to add"), 400);
+      return;
+    }*/
+
+    if (req.body.id != null) {//mock a failure situation
       next(new Error("Must pass id of item to add"), 400);
       return;
     }
