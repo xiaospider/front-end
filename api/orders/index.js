@@ -139,9 +139,8 @@
       if (err) {
         return next(err);
       }
-      setTimeout(() => {
-        helpers.respondStatusBody(res, status, JSON.stringify(result));
-      }, 5000);
+      helpers.respondStatusBody(res, status, JSON.stringify(result));
+      
     });
   });
 
