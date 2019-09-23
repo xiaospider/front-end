@@ -141,7 +141,7 @@
       }
       setTimeout(() => {
         helpers.respondStatusBody(res, status, JSON.stringify(result));
-      }, 20000);
+      }, 5000);
     });
   });
 
